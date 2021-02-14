@@ -1,0 +1,35 @@
+[
+	{	"name": "Norte & Nordeste",
+		"cities":[
+			"Aracaju",
+			"Fortaleza",
+			"João Pessoa",
+			"Palmas",
+			"Recife",
+			"Salvador",
+			"Teresina"]
+	},
+	{"name": "Centro-Oeste",
+		"cities": [
+			"Brasília",
+			"Campo Grande",
+			"Cuiabá"]
+	},
+
+	{	
+		"name": "Sul & Sudeste",
+		"cities": [
+			"ABC",
+			"Alphaville",
+			"Belo Horizonte",
+			"Curitiba",
+			"Niterói",
+			"Ribeirão Preto",
+			"Rio de Janeiro",
+			"Santos",
+			"São José dos Campos",
+			"São Paulo",
+			"Sorocaba",
+			"Uberlândia"]
+	}
+]

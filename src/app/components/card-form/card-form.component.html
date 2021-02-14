@@ -1,0 +1,101 @@
+<div class="card-form">
+	<header class="card-form-header">
+		<a href="#" onclick='javascript:history.back();return false;' class="card-form-back-button">
+			<img src="/assets/arrow_forward.png"/>
+		</a>
+		<div class="card-form-avatar">
+			<img src="{{establishment.picture}}"/>	
+		</div>
+		<div class="card-form-info">
+			<h4>
+				{{establishment.name}} 
+			</h4>
+			<p>
+				ID: {{establishment.id}}
+			</p>
+		</div>
+	</header>
+
+	<form (ngSubmit)="onSubmit()">
+		<div class="input-context">
+			<header>
+				Informações Básicas
+			</header>
+			<div class="input-context-content">
+				<div class="input-group">
+					<label for="name">Nome</label>
+					<input id="name" name="name" [(ngModel)]="establishment.name"/>
+				</div>
+
+				<div class="input-group">
+					<label for="city">Cidade</label>
+					<select id="city" name="city" [(ngModel)]="establishment.city">
+						<optgroup *ngFor="let group of regions" label="{{group.name}}">
+						    <option *ngFor="let city of group.cities" [ngValue]="city">{{city}}</option>
+						</optgroup>
+
+					</select>
+				</div>
+
+				<div class="input-group">
+					<label for="address">Endereço</label>
+					<input id="address" name="address" [(ngModel)]="establishment.address"/>
+				</div>
+			</div>
+		</div>
+		<div class="input-context">
+			<header>
+				Financeiro
+			</header>
+			<div class="input-context-content">
+				<div class="input-group">
+					<label for="bankName">Banco</label>
+					<select id="bankName" name="bankName" [(ngModel)]="establishment.bankName">
+						<option *ngFor="let bank of banks" [value]="bank.value" >{{bank.label}}</option>	
+					</select>
+				</div>
+
+				<div class="input-group">
+					<label for="bankAccountType">Tipo de conta</label>
+					<select id="bankAccountType" name="bankAccountType" [(ngModel)]="establishment.bankAccountType">
+						
+						<option *ngFor="let account_type of accountTypes" [value]="account_type" >{{account_type}}</option>	
+
+					</select>
+				</div>
+
+				<div class="input-group">
+					<label for="bankCpfCnpj">CPF / CNPJ</label>
+					<input mask="000.000.000-00||00.000.000/0000-00" id="bankCpfCnpj" name="bankCpfCnpj" [(ngModel)]="establishment.bankCpfCnpj"/>
+				</div>
+
+				<div class="input-group">
+					<label for="bankAgencyNumber">Agência</label>
+					<div class="account-number-and-digit">
+						<input id="bankAgencyNumber" name="bankAgencyNumber" [(ngModel)]="establishment.bankAgencyNumber"/>
+						<input id="bankAgencyDigit" name="bankAgencyDigit" [(ngModel)]="establishment.bankAgencyDigit"/>
+					</div>
+				</div>
+
+				<div class="input-group">
+					<label for="bankAccountNumber">Conta</label>
+					<div class="account-number-and-digit">
+						<input id="bankAccountNumber" name="bankAccountNumber" [(ngModel)]="establishment.bankAccountNumber"/>
+						<input id="bankAccountDigit" name="bankAccountDigit" [(ngModel)]="establishment.bankAccountDigit"/>
+					</div>
+				</div>
+
+				<div class="input-group">
+					<label for="isAutomaticWithdrawal">Saque automático?</label>
+					<select id="isAutomaticWithdrawal" name="isAutomaticWithdrawal" [(ngModel)]="establishment.isAutomaticWithdrawal">
+						<option *ngFor="let option of booleanOptions" [ngValue]="option.value">{{option.label}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<button type="submit">SALVAR</button>
+		</footer>
+		
+	</form>
+</div>

@@ -1,0 +1,13 @@
+<a class="card" routerLink="/establishments/{{establishment.id}}">
+	<div class="card-avatar">
+		<img src="{{establishment.picture}}"/>	
+	</div>
+	<div class="card-info">
+		<h4>
+			{{establishment.name}} <span class="light-font">{{establishment.id}}</span>
+		</h4>
+		<p>
+			{{establishment.city || " - "}} <span class="divisor"></span> {{establishment.address}}
+		</p>
+	</div>
+</a>

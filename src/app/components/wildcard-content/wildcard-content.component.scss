@@ -1,0 +1,25 @@
+.wildcard{
+	height: 100vh;
+	.header{
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		img.header-logo{
+			width: 39px;
+			opacity: 0.5;
+		}
+	}
+	.content{
+		background: #F8F9FD;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+		height: calc(100% - 110px);
+		& > div{
+			height: 100%;
+		}
+	}	
+}

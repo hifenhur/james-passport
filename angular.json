@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "james-passport"
+    }
+  },
+  "defaultProject": "james-passport",
+  "cli": {
+    "analytics": "fc2dbdca-19eb-4534-bd98-dc16e74d4d68"
+  }
 }
